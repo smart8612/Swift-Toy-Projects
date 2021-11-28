@@ -1,47 +1,77 @@
-## 🧮 **iOS 계산기 프로젝트**
+# 🧮 **iOS 계산기 프로젝트**
 
-- iOS 계산기 앱을 구현합니다
+## 🧐 프로젝트 개요
 
-https://user-images.githubusercontent.com/25794814/143540058-61198ebe-6f3f-4059-9ded-483e62421e38.mp4
+- iOS 계산기 앱을 구현합니다.
+- ARC 규칙에 맞춰 메모리 누수가 발생지 않는`LinkedList` 를 구현합니다.
+- `Queue ` 자료구조를 활용하여 순차적으로 수식을 처리하는 계산기를 구현합니다.
+- `Test-Driven-Development` 를 통해 `UnitTest` 를 진행하며 개발합니다.
 
-### **프로젝트 참여자**
+### 💻 동작 화면
 
-@singularis7
+| 계산기 동작 화면                                             | UnitTest 검증 화면                                           |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| ![CalculatorExample](https://user-images.githubusercontent.com/25794814/143765316-4e4bd3f7-339b-4e15-b9c0-d7dbdfdd16bc.gif | ![CalculatorUnitTest](https://user-images.githubusercontent.com/25794814/143765462-a9d2f64a-e014-4837-8292-17ef26230144.gif |
 
-### **리뷰어**
+### 🧑🏻‍💻 **참여자**
 
-@AppleCEO 도미닉
+| 개발자                                       | 리뷰어                                          | 의존모둠원                                    |
+| -------------------------------------------- | ----------------------------------------------- | --------------------------------------------- |
+| [@singularis7](https://github.com/smart8612) | [@AppleCEO](https://github.com/AppleCEO) 도미닉 | [@oksunwoo](https://github.com/oksunwoo) Toni |
 
-### **프로젝트 기간**
+### 📆 **기간**
 
 * **메인 프로젝트 기간**: 2021.11.08 ~ 2021.11.19
 * **추가 유지보수 기간**: 2021.11.22 ~ 2021.11.26
 
+### 📖 규칙 (Grounds Rule)
+
+### 프로젝트에 집중하는 시간
+
+- 평일 오전 10시 30 ~ 저녁 8시 (필요 시 30분 정도 조정 가능)
+- 밥먹는 시간 : 1시간 ~ 1시간 30분
+- 공식적인 휴일 : 편할때 쉽시다~
+
+### 의존 모둠원과의 규칙
+
+- 모르거나 새로운 개념을 적용하고 싶을 때 바로 찾아볼 시간을 주세요!
+- 매번 스탭이 끝날 때마다 코드 설명해주기!
+- 커뮤니케이션을 진행할 때 편하고 적극적으로 표현해주세요!
+- PR 보내기 전에 고민했던점 공유하기!
+
+### Commit 규칙
+
+* 단위 : 함수를 구현, 기능 구현
+* Convention : Karma Style
+
 ---
 
-## **프로젝트 개요**
+## 🥳 **Achievement**
 
 ### **[Step 1]**
 
 - 연산자와 피연산자를 연산하기 전에 보관할 자료구조로 `Queue` 를 구현하였습니다.
 - 삽입 / 삭제를 O(1) 시간복잡도를 갖도록 `LinkedList`를 채택하여 큐를 구현하였습니다.
 - UnitTest를 활용한 `TDD` 방식을 접목하도록 시도해보았습니다
+- Pull Request : Reviewed By 🍎 [@AppleCEO](https://github.com/AppleCEO) [Step 1 Pull Request Link](https://github.com/yagom-academy/ios-calculator-app/pull/81)
 
 ### [Step 2]
 
 - UML Diagram 명세서 구조에 맞춰서 코드를 구현하였습니다.
-- 수식을 파싱할 때 고차 함수 `map` `compactMap` `filter` 와 같은 고차 함수를 활용하여 구현하였습니다.
+- 수식을 파싱할 때 `map` `compactMap` `filter` 와 같은 고차 함수를 활용하여 구현하였습니다.
+- Pull Request : Reviewed By 🍎 [@AppleCEO](https://github.com/AppleCEO) [Step 2 Pull Request Link](https://github.com/yagom-academy/ios-calculator-app/pull/99) 
 
 ### [Step 3]
 
-- ViewController 에서 View 에 관련된 처리만 할 수 있도록 계산기에 관련한 데이터와 로직을 별도의 타입으로 분리하였습니다.
+- ViewController 에서 View 에 관련된 처리만 할 수 있도록 계산기에 관련한 데이터와 로직을 `Calculator` 타입으로 분리하였습니다.
 - 모델에 존재하는 계산 데이터의 상태를 View 가 반영하도록 데이터의 흐름을 제어하였습니다.
-- StackView와 ScrollView 를 활용하여 연산 수식을 표현해보았습니다.
-- NumberFormatter 를 활용하여 숫자를 특정 형식으로 포맷팅하여 출력시켜보았습니다.
+- [StackView](https://developer.apple.com/documentation/uikit/uistackview)와 [ScrollView](https://developer.apple.com/documentation/uikit/uiscrollview) 를 활용하여 연산 수식을 표현해보았습니다.
+- [NumberFormatter](https://developer.apple.com/documentation/foundation/numberformatter) 를 활용하여 숫자를 특정 형식으로 포맷팅하여 출력시켜보았습니다.
+- Pull Request : Reviewed By 🍎 [@AppleCEO](https://github.com/AppleCEO) [Step 3 Pull Request Link](https://github.com/yagom-academy/ios-calculator-app/pull/126)  
 
 ---
 
-### **Model UML Diagram**
+## 🎼 **UML 설계도**
 
 ![https://user-images.githubusercontent.com/25794814/141769960-0df5083a-2760-4a3d-9afe-c05527dba6d5.jpg](https://user-images.githubusercontent.com/25794814/141769960-0df5083a-2760-4a3d-9afe-c05527dba6d5.jpg)
 
@@ -49,69 +79,97 @@ https://user-images.githubusercontent.com/25794814/143540058-61198ebe-6f3f-4059-
 
 ## [Step 1] **Queue 타입 구현**
 
+
+
 ### Keyword
 
 - Queue
+
 - LinkedList
+
 - TDD
+
 - UnitTest
+
+  
 
 ### 고민 했던 부분
 
-- `**CalculatorItemQueue`에서 다루는 요소는 `CalculateItem` 프로토콜을 준수하기위한 접근법**
-    1. `CalculateItem` 프로토콜을 `CalculatorItemQueue`에서 다루는 요소의 타입으로 사용
+- `CalculatorItemQueue`에서 다루는 Element 에 대하여 `CalculateItem` 프로토콜을 채택한 타입만 사용하도록 구현하는 방법
+    
+    
+    
+    1.  `CalculatorItemQueue` 의 Element 타입에  `CalculateItem` 프로토콜을 채택하도록 제약 조건 명시
        
-        초기 구현 방법으로 큐 내부의 컬렉션에 `CalculateItem` 타입으로 담아주는 방법을 구현했지만 다음의 어려움이 있었습니다.
+        - Element 의 타입으로 프로토콜을 사용할 경우 Queue로부터 dequeue한 자료를 XCTAssert 를 이용해 비교하기 어렵습니다.
+        - 비교 작업은 `Equatable` 을 채택한 타입의 인스턴스 끼리만 할 수 있다는 Xcode 오류가 발생하기 때문입니다.
+        - 위 상황에서 문제를 해결하려면 `CalculateItem` 을 준수하는 타입으로 다운 캐스팅해줘야 합니다.
+        - 다운 캐스팅  `as?` 이후 옵셔널 바인딩 코드가 들어가기 때문에 복잡해지기 때문에 다른 방법을 강구하게 되었습니다.
         
-        - Queue에서 dequeue한 자료를 XCTAssert 를 이용해 비교할 수 없습니다. 비교 작업은 Equatable 을 채택한 타입의 인스턴스 끼리만 비교할 수 있다는 오류를 마주치게 됩니다.
-        - 억지로 비교하는 작업을 수행하려면 `CalculateItem` 을 준수하는 다른 타입으로 다운 캐스팅하여 비교해야합니다. 다운캐스팅이 가능한 타입을 `as?` 를 통해 매번 구분해줘야 하기 때문에 코드가 복잡해집니다.
-        
-        ```
+        ```swift
         // Example
         let item: CalculateItem = queue.dequeue()
         
         if let item as? String {
             XCTAssertEqual(, )
         } else if let item as Int {
-        
+           ...
         ```
         
-    2. `CalculateItem` 프로토콜을 준수하는 Generic 을 활용한 `CalculatorItemQueue` 요소 타입 사용 CalculateItem 프로토콜을 준수하는 어느 타입으로 Queue 를 활용하여 첫번째 문제를 해결해보았습니다. `CalculatorItemQueue`에서 다루는 요소는 `CalculateItem` 프로토콜을 준수한다는 요구조건에 부합하며 다운 캐스팅할 필요없이 자신의 타입을 명확히 알 수 있는 방식이기 때문입니다.
-       
-        ```
+        
+        
+    2.  `CalculatorItemQueue` 의 Element 타입으로 `Generic` 을 사용하고 `Type Parameter` 가 `CalculatorItem` 프로토콜을 채택하도록 제약 조건 명시
+    
+        * 다운 캐스팅 과정 없이도 Queue 에 들어올 Element 타입을 명확하게 알 수 있습니다.
+        * Generic 을 사용하면 위 경우 타입에 일부 제약 조건을 명시했지만 타입에 크게 의존하지 않으며 유연하고 재사용성이 좋은 코드를 작성할 수 있습니다.
+        * `CalculatorItemQueue`에서 다루는 요소 타입은 반드시 `CalculateItem` 프로토콜을 채택한 타입만 사용할 수 있기 때문에 요구 조건을 충족합니다.
+        * Queue 의 Element 타입은 본래 자신의 타입을 유지하고 있기 때문에 Equatable 한 타입이라면 XCTAssert 를 적용하기 쉽습니다.
+    
+        ```swift
         struct CalculatorItemQueue<Element> where Element: CalculateItem {
             ...
         }
         ```
     
+    
+    
 - **Queue 를 구현할 자료구조를 선택하는 접근법**
-  
-    컴퓨터에서 사용하는 자원을 정량화 할 때 시간복잡도와 공간복잡도 개념을 많이 사용합니다. 현재 프로젝트에서 구현하는 Queue 처럼 동작하는 연산을 구현하려면 첫번째 요소에 접근하고 제거하는 비용이 적고 마지막 요소에 자료를 삽입하는 비용이 적을 수록 유리합니다. 이 기준을 통해 다음의 자료구조를 평가해보았습니다.
+
+    * 컴퓨터에서 사용하는 자원을 정량화 할 때 사용되는 시간복잡도와 공간복잡도 개념을 통해 Queue 를 구현하기 적합한 자료구조를 선정해보았습니다.
+    * Queue 처럼 동작하는 연산은 첫번째 요소에 접근하고 제거하는 비용이 적고 마지막 요소에 자료를 삽입하는 비용이 적을 수록 유리합니다.
+
     
+
     1. Swift Standard Array
+
+        * Swift에서 기본으로 제공하는 컬렉션인 배열의 경우 삽입 삭제시 다음과 같은 시간복잡도를 갖습니다.
+
+        * 기존에 배열이 할당해둔 capacity 범위에서는 O(1) 로 `append` 연산이 이뤄지지만 할당되어있는 capacity를 초과하는 경우 
+        * 새로운 공간을 할당해서 값복사가 이뤄지기 때문에 최악의 경우 O(N)의 연산이 발생될 수 있습니다.
+        * 앞쪽 데이터를 삭제하는 removeFirst() 혹은 remove 메서드를 사용해도 O(N) 의 시간복잡도가 소요됩니다.
+        * 삽입 / 삭제가 자주 이루어지는 큐에서 사용할 자료구조로 사용하기에는 적지 않은 연산 비용을 사용합니다.
+
+        > Arrays increase their allocated capacity using an exponential strategy
+        >
+        > \- [Apple official document - Array (append)](https://developer.apple.com/documentation/swift/array/3126937-append)
+        
+
+    3. Doubly Linked List
        
-        Swift에서 기본으로 제공하는 컬렉션인 배열의 경우 삽입 삭제시 다음과 같은 시간복잡도를 갖습니다.
+        * Head와 Tail 위치를 동시에 기억해두어 리스트의 양끝단에서 삽입 / 삭제를 할 때에 O(1)의 연산 비용으로 구현할 수 있습니다.
+        * 앞 뒤에서 삽입 삭제 비용이 때문에 저렴하기 때문에 Queue 를 구현 위한 자료구조로 적합합니다.
+        * Singly Linked List 와는 다르게 다음 노드와 이전 노드의 메모리 주소를 함께 기억하고 있기 때문에 노드간의 이동이 자유롭습니다.
+        * 연산자의 우선순위를 고려하는 요구사항이 추가 될때 기존 연결리스트 구현을 재사용하여 Stack 자료구조를 구현하기 수월합니다.
         
-        기존에 배열이 할당해둔 capacity 범위에서는 O(1) 로 `append` 연산이 이뤄지지만 할당되어있는 capacity를 초과하는 경우 새로운 공간을 할당해서 값복사가 이뤄지기 때문에 최악의 경우 O(N)의 연산이 발생될 수 있습니다.
         
-        > arrays increase their allocated capacity using an exponential strategy
-        > 
-        - [Apple Document - Array (append 메서드 부분)](https://developer.apple.com/documentation/swift/array/3126937-append) >
-        
-        앞쪽 데이터를 삭제하는 removeFirst() 혹은 remove 메서드를 활용할 경우에도 O(N) 의 시간복잡도가 소요되기 때문에 삽입 / 삭제가 자주 이루어지는 큐에서 사용할 자료구조로 사용하기에는 너무 많은 연산 비용을 사용합니다.
-        
-    2. Singly LinkedList
-       
-        데이터의 삽입 / 삭제의 측면에서 더 적은 비용을 사용하기 위해 단방향 연결리스트를 구현해보았습니다. 데이터를 삽입할 때 마지막 노드를 찾아야 하기 때문에 O(N)의 비용이 들지만 첫번째 요소를 삭제하는 측면에서는 head 포인터를 끊어주고 다시 연결해주는 간단한 작업을 해주면 되기 때문에 더 저렴하게 연산을 할 수 있습니다. 하지만 저는 여전히 마지막에 데이터를 삽입하는 경우 O(N)의 비용이 비싸다고 생각했습니다.
-        
-    3. Doublely LinkedList
-       
-        시작 위치와 끝 위치를 동시에 기억해둡니다. 단방향 연결리스트와는 다르게 이전 노드의 메모리 주소도 기억하고 있기 때문에 노드간의 이동이 자유롭습니다. 앞 뒤에서 삽입 / 삭제를 할 때에 O(1)의 연산 비용이 들기 때문에 저렴합니다. 따라서 큐의 구현을 위한 자료구조로 적합합니다. 더 나아가 추후 연산 기능을 구현할 때 연산자의 우선순위를 고려하는 구현이 발생할 경우 연결리스트 구현을 활용한 스택 구현에 활용하기에도 좋습니다!
+
+- **Linked List 를 구성하는 모든 Node가 메모리 누수 없이 Heap 에서 정상적으로 deallocate 되도록 구현**
     
-- **연결리스트에 담긴 모든 노드가 정상적으로 heap 에서 deallocate 되도록 고민한 접근법**
     - Swift의 ARC 방식은 strong 참조 횟수를 세어서 0보다 큰 경우에는 heap 에서 클래스 인스턴스를 유지시키지만 참조하는 모든 연결고리가 끊어진 경우 (즉, 카운트가 0인 경우) heap에서 할당된 메모리를 회수한다고 가벼운 개념 정도만 잡고 있습니다.
     - 노드를 삭제하거나 LinkedList 자체가 사용되지 않을 경우 모든 노드가 정상적으로 deallocate 되도록 LinkedList를 설계했습니다. 즉, 삭제 연산 등의 메모리를 반환해야 하는 경우가 있다면 노드 간의 참조하는 모든 연결고리를 완벽히 끊어주고자 노력했습니다.
     - 이 과정은 UnitTest를 통해 검증하기가 어려워서 Node 클래스에 deinit 메서드 내부에 print를 호출하여 메모리가 회수되는 과정을 콘솔창을 통해 검증하면서 구현했습니다.
+    
+    
     
 - **Queue 설계를 UML 다이어그램으로 표현하기위한 접근법**
     - CalculatorQueue 타입은 제네릭을 통해 구현되어있습니다.
